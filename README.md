@@ -11,7 +11,7 @@ I tried workaround (i.e. casting, compile dynamic), but then I have NPE during r
 
 
 Code causing a problem:
-```
+```groovy
 @CompileStatic
 class Wrapper {
     io.vertx.ext.web.RoutingContext context
@@ -32,12 +32,12 @@ class Wrapper {
 ```
 
 Where RoutingContext have method:
-```
+```groovy
 @Nullable JsonObject getBodyAsJson();
 ```
 
 And JsonObject have method:
-```
+```groovy
 public Map<String, Object> getMap() {
     return map;
 }
